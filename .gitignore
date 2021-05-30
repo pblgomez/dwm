@@ -2,5 +2,7 @@ config.def.h.orig
 config.h
 drw.o
 dwm
+dwm.c*
+dwm.1
 dwm.o
 util.o
