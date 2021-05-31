@@ -3,5 +3,5 @@
 ~/.local/scripts/touchpad_enable.sh &
 xbanish &
 sxhkd -c $XDG_CONFIG_HOME/sxhkd/sxhkdrc &
-greenclip &
+greenclip daemon &
 sleep 1; xwallpaper --zoom $XDG_CACHE_HOME/bg.png &
