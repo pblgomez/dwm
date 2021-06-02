@@ -15,15 +15,14 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Font Awesome 5 Free:size=9",
                                         "monospace:size:30" };
 static const char dmenufont[]       = "Font Awesome 5 Free:size=9";
-static const char col_gray1[]       = "#2E3440";
-static const char col_gray2[]       = "#BF616A";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#ECEFF4";
-static const char col_cyan[]        = "#5E81AC";
+static const char* const nord[]     = { "#2e3440", "#3b4252", "#434c5e", "#4c566a",
+                                        "#d8dee9", "#e5e9f0", "#eceff4",
+                                        "#8fbcbb", "#88c0d0", "#81a1c1", "#5e81ac",
+                                        "#bf616a", "#d08770", "#ebcb8b", "#a3be8c", "#b48ead" };
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	                                      /*               fg         bg         border   */
+                                        [SchemeNorm] = { nord[4], nord[0],  nord[3]   },
+                                        [SchemeSel]  = { nord[0], nord[7],  nord[14]   },
 };
 
 /* tagging */
@@ -66,7 +65,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 
 static Key keys[] = {
@@ -77,7 +76,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_d,      incnmaster,     {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_o,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,		          XK_Return, zoom,           {0} },
