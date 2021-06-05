@@ -21,7 +21,7 @@ static const char* const nord[]     = { "#2e3440", "#3b4252", "#434c5e", "#4c566
                                         "#bf616a", "#d08770", "#ebcb8b", "#a3be8c", "#b48ead" };
 static const char *colors[][3]      = {
 	                                      /*               fg         bg         border   */
-                                        [SchemeNorm] = { nord[4], nord[0],  nord[3]   },
+                                        [SchemeNorm] = { nord[5], nord[0],  nord[3]   },
                                         [SchemeSel]  = { nord[0], nord[7],  nord[14]   },
 };
 
