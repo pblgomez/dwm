@@ -9,9 +9,9 @@ else
   setxkbmap us,es altgr-intl, -option grp:rctrl_rshift_toggle
 fi
 ~/.local/scripts/touchpad_enable.sh &
-dunst
+dunst &
 xbanish &
-sxhkd -c $XDG_CONFIG_HOME/sxhkd/sxhkdrc &
-greenclip daemon &
 dwmbar &
+greenclip daemon &
+sxhkd -c $XDG_CONFIG_HOME/sxhkd/sxhkdrc &
 sleep 1; xwallpaper --zoom $XDG_CACHE_HOME/bg.png &
