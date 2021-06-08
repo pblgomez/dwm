@@ -13,5 +13,7 @@ dunst &
 xbanish &
 dwmbar &
 greenclip daemon &
+nm-applet &
+blueman-applet &
 sxhkd -c $XDG_CONFIG_HOME/sxhkd/sxhkdrc &
 sleep 1; xwallpaper --zoom $XDG_CACHE_HOME/bg.png &
