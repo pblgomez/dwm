@@ -8,6 +8,7 @@ if [ -f $HOME/.config/pbl.xkb ]; then
 else
   setxkbmap us,es altgr-intl, -option grp:rctrl_rshift_toggle
 fi
+lxpolkit &
 ~/.local/scripts/touchpad_enable.sh &
 dunst &
 xbanish &
