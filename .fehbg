@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-scale '/home/pbl/Pictures/Wallpapers/10-14-Day.jpg' 
