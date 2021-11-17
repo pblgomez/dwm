@@ -19,4 +19,5 @@ nm-applet &
 ~/.config/dwm-bar/dwm_bar.sh &
 blueman-applet &
 /home/pbl/.local/share/dwm/.fehbg &
+udiskie &
 #sleep 1; xwallpaper --zoom $XDG_CACHE_HOME/bg.png &
